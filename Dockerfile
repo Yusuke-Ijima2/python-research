@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.9-slim
 USER root
 
 RUN apt-get update
@@ -19,3 +19,5 @@ WORKDIR /root/src
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 RUN pip install -r requirements.txt
+
+CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "8080"]
