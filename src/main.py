@@ -2,9 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 from fastapi import FastAPI, Response
 
-hogeio = open("test.txt")
-reader = hogeio.read()
-hogeio.close()
+txt_file = open("test.txt")
+reader = txt_file.read()
+txt_file.close()
 reader = reader.split("\n")
 # print(reader)
 
